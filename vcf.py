@@ -134,12 +134,12 @@ def assemble_variants_mock(
             chosen[0]['gt'] = '0/1'
             chosen[1]['gt'] = '0/1'
         elif len(pathogenic_candidates) == 1:
-            # If only one found, assume compound heterozygous with another common pathogenic
-            chosen = random.sample(pathbiotic_candidates,1)
+            # If only one found, duplicate it to simulate compound heterozygous
+            chosen = random.sample(pathogenic_candidates, 1)
             assembled_variants.extend(chosen)
-            assembled_variants.append(pathogenic_candidates[0]) # Add it twice to simulate compound het with itself if only one exists
+            assembled_variants.append(pathogenic_candidates[0])
             chosen[0]['gt'] = '0/1'
-            assembled_variants[-1]['gt'] = '0/1' # Second allele
+            assembled_variants[-1]['gt'] = '0/1'
             st.warning("Not enough distinct pathogenic variants for AR. Simulating compound heterozygous with available.")
         else:
             st.error("No pathogenic variants found for selected AR disease in mock DB.")
