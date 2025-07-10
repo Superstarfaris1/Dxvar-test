@@ -57,6 +57,56 @@ MOCK_GENETIC_DISORDERS = [
         "inheritance": "Autosomal Dominant",
         "genes": ["FBN1"],
     },
+    {
+        "name": "Phenylketonuria",
+        "hpo": [
+            "HP:0001994 (Neonatal vomiting)",
+            "HP:0001249 (Intellectual disability)",
+            "HP:0000739 (Seizures)",
+        ],
+        "inheritance": "Autosomal Recessive",
+        "genes": ["PAH"],
+    },
+    {
+        "name": "Tay-Sachs Disease",
+        "hpo": [
+            "HP:0001250 (Severe muscular hypotonia)",
+            "HP:0001260 (Cherry red spot)",
+            "HP:0001276 (Neurodegeneration)",
+        ],
+        "inheritance": "Autosomal Recessive",
+        "genes": ["HEXA"],
+    },
+    {
+        "name": "Neurofibromatosis Type 1",
+        "hpo": [
+            "HP:0009733 (Cafe-au-lait spots)",
+            "HP:0001661 (Neurofibromas)",
+            "HP:0000486 (Lisch nodules)",
+        ],
+        "inheritance": "Autosomal Dominant",
+        "genes": ["NF1"],
+    },
+    {
+        "name": "Hemophilia A",
+        "hpo": [
+            "HP:0001928 (Prolonged bleeding)",
+            "HP:0001981 (Hemarthrosis)",
+            "HP:0003010 (Factor VIII deficiency)",
+        ],
+        "inheritance": "X-linked",
+        "genes": ["F8"],
+    },
+    {
+        "name": "Alpha-1 Antitrypsin Deficiency",
+        "hpo": [
+            "HP:0006531 (Emphysema)",
+            "HP:0001404 (Hepatic fibrosis)",
+            "HP:0009060 (Neonatal cholestasis)",
+        ],
+        "inheritance": "Autosomal Co-dominant",
+        "genes": ["SERPINA1"],
+    },
 ]
 
 # Mock variants with different classifications for a few genes
@@ -87,6 +137,35 @@ MOCK_VARIANTS_DB = {
         {"chr": "chr15", "pos": "48740000", "id": "rsFBN1_path1", "ref": "C", "alt": "T", "clnsig": "Pathogenic", "freq": "0.00001"},
         {"chr": "chr15", "pos": "48740500", "id": "rsFBN1_VUS1", "ref": "A", "alt": "G", "clnsig": "Uncertain_significance", "freq": "0.00005"},
         {"chr": "chr15", "pos": "48741000", "id": "rsFBN1_benign1", "ref": "T", "alt": "C", "clnsig": "Benign", "freq": "0.05"},
+    ],
+    "PAH": [
+        {"chr": "chr12", "pos": "103234567", "id": "rs5030858", "ref": "T", "alt": "C", "clnsig": "Pathogenic", "freq": "0.0001"},
+        {"chr": "chr12", "pos": "103234678", "id": "rs62516034", "ref": "C", "alt": "T", "clnsig": "Likely_pathogenic", "freq": "0.00005"},
+        {"chr": "chr12", "pos": "103234789", "id": "rs1800000", "ref": "G", "alt": "A", "clnsig": "Uncertain_significance", "freq": "0.001"},
+        {"chr": "chr12", "pos": "103234890", "id": "rs199475", "ref": "A", "alt": "G", "clnsig": "Benign", "freq": "0.05"},
+    ],
+    "HEXA": [
+        {"chr": "chr15", "pos": "72346567", "id": "rs11648", "ref": "C", "alt": "T", "clnsig": "Pathogenic", "freq": "0.0001"},
+        {"chr": "chr15", "pos": "72346700", "id": "rs28940870", "ref": "G", "alt": "A", "clnsig": "Likely_pathogenic", "freq": "0.00005"},
+        {"chr": "chr15", "pos": "72346800", "id": "rs3780103", "ref": "A", "alt": "G", "clnsig": "Uncertain_significance", "freq": "0.001"},
+    ],
+    "NF1": [
+        {"chr": "chr17", "pos": "29553410", "id": "rs79588645", "ref": "C", "alt": "T", "clnsig": "Pathogenic", "freq": "0.0001"},
+        {"chr": "chr17", "pos": "29553520", "id": "rs104894193", "ref": "G", "alt": "A", "clnsig": "Likely_pathogenic", "freq": "0.00005"},
+        {"chr": "chr17", "pos": "29553630", "id": "rs55954512", "ref": "A", "alt": "G", "clnsig": "Uncertain_significance", "freq": "0.001"},
+        {"chr": "chr17", "pos": "29553740", "id": "rs10692721", "ref": "T", "alt": "C", "clnsig": "Benign", "freq": "0.1"},
+    ],
+    "F8": [
+        {"chr": "chrX", "pos": "154835788", "id": "rs61746189", "ref": "A", "alt": "G", "clnsig": "Pathogenic", "freq": "0.0001"},
+        {"chr": "chrX", "pos": "154835999", "id": "rs6048", "ref": "G", "alt": "A", "clnsig": "Likely_pathogenic", "freq": "0.00005"},
+        {"chr": "chrX", "pos": "154836222", "id": "rs586178", "ref": "T", "alt": "C", "clnsig": "Uncertain_significance", "freq": "0.001"},
+        {"chr": "chrX", "pos": "154837333", "id": "rs1800291", "ref": "C", "alt": "T", "clnsig": "Benign", "freq": "0.1"},
+    ],
+    "SERPINA1": [
+        {"chr": "chr14", "pos": "94844347", "id": "rs28929474", "ref": "G", "alt": "A", "clnsig": "Pathogenic", "freq": "0.002"},
+        {"chr": "chr14", "pos": "94845432", "id": "rs17580", "ref": "T", "alt": "C", "clnsig": "Likely_pathogenic", "freq": "0.001"},
+        {"chr": "chr14", "pos": "94845500", "id": "rs6647", "ref": "C", "alt": "T", "clnsig": "Uncertain_significance", "freq": "0.05"},
+        {"chr": "chr14", "pos": "94845789", "id": "rs8004738", "ref": "A", "alt": "G", "clnsig": "Benign", "freq": "0.2"},
     ],
 }
 
